@@ -16,4 +16,4 @@ services:
     networks:
       my-network:
         external: 
-            name: frontendnet
+          name: "frontendnet"
