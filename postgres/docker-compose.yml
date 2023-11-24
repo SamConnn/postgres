@@ -1,5 +1,9 @@
 version: "3.3"
 
+networks:
+    default:
+      external:
+        name: frontendnet
 services:
   postgres:
     image: postgres:16.1-alpine
@@ -13,7 +17,3 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-    networks:
-      network1:
-        name: frontendnet
-        external: true
