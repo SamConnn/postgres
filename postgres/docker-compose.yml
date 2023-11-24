@@ -14,5 +14,6 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     networks:
-      default:
-        driver: frontendnet
+      network1:
+        name: frontendnet
+        external: true
